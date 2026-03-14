@@ -1,2 +1,516 @@
-# horizon2026.github.io
-new horizon for human Startup Cradle in name of God Spirit ; this is historic horizon for human and ET
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizon 2026 -- New Starting Point of New Human</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --paper: #faf7f2;
+    --ink: #1a1208;
+    --muted: #7a6e5f;
+    --border: #d8cfc0;
+    --accent: #c84b2f;
+    --accent2: #2d6a4f;
+    --accent3: #1b4f8a;
+    --yellow: #f2c94c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .issue-info { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .header-stamp {
+    background: var(--accent); color: white;
+    font-family: 'Fraunces', serif; font-size: 0.62rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem; border-radius: 2px; transform: rotate(-1deg);
+  }
+  .masthead {
+    text-align: center;
+    padding: 2.5rem 3rem 2rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .masthead-eyebrow {
+    font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.8rem;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .masthead-eyebrow::before, .masthead-eyebrow::after {
+    content: ''; flex: 1; max-width: 120px; height: 1px; background: var(--border);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900; line-height: 0.9; letter-spacing: -0.03em;
+  }
+  h1 em { font-style: italic; font-weight: 300; color: var(--accent); }
+  .masthead-sub { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.8rem; }
+
+  .nav-bar {
+    display: flex; border-bottom: 2px solid var(--ink); overflow-x: auto;
+    background: var(--paper);
+  }
+  .nav-bar a {
+    flex: 1; text-align: center; padding: 0.65rem 0.5rem;
+    font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; color: var(--ink); border-right: 1px solid var(--border);
+    transition: all 0.15s; white-space: nowrap;
+  }
+  .nav-bar a:last-child { border-right: none; }
+  .nav-bar a:hover { background: var(--ink); color: var(--bg); }
+
+  /* TICKER */
+  .ticker {
+    background: var(--accent2); color: white;
+    padding: 0.5rem 0; overflow: hidden; white-space: nowrap;
+    border-bottom: 2px solid var(--ink);
+  }
+  .ticker-inner {
+    display: inline-block; animation: ticker 35s linear infinite;
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* MAIN GRID */
+  .newspaper-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1200px; margin: 0 auto;
+    border-bottom: 2px solid var(--ink);
+  }
+  .col {
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+  }
+  .col:last-child { border-right: none; }
+  .col-label {
+    font-size: 0.57rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem; margin-bottom: 1.2rem;
+  }
+  h2.col-headline {
+    font-family: 'Fraunces', serif; font-size: 1.7rem;
+    font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.8rem;
+  }
+  h3.section-head {
+    font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 700;
+    margin-bottom: 0.5rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--border); margin-top: 1.2rem;
+  }
+  p.body-text { font-size: 0.77rem; line-height: 1.8; color: #3d3020; margin-bottom: 0.8rem; }
+
+  /* PLATFORM CARDS */
+  .platform-card {
+    border: 1px solid var(--border); border-radius: 3px;
+    padding: 1.1rem; margin-bottom: 0.9rem; background: var(--paper);
+    text-decoration: none; display: block; color: var(--ink);
+    transition: all 0.18s; position: relative; overflow: hidden;
+  }
+  .platform-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  }
+  .card-gh::before { background: #333; }
+  .card-netlify::before { background: #00c7b7; }
+  .card-vercel::before { background: #111; }
+  .card-notion::before { background: #eb5757; }
+  .card-gsites::before { background: #4285f4; }
+  .platform-card:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .platform-card:hover .platform-desc { color: rgba(245,240,232,0.65); }
+  .platform-card:hover .platform-url { color: var(--yellow); }
+  .platform-card:hover .platform-tag { opacity: 0.5; }
+  .platform-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem; }
+  .platform-name { font-family: 'Fraunces', serif; font-size: 0.9rem; font-weight: 700; }
+  .platform-tag {
+    font-size: 0.53rem; letter-spacing: 0.1em; text-transform: uppercase;
+    background: rgba(0,0,0,0.06); padding: 0.18rem 0.45rem;
+    border-radius: 2px; color: var(--muted);
+  }
+  .platform-desc { font-size: 0.7rem; line-height: 1.6; color: var(--muted); margin-bottom: 0.45rem; }
+  .platform-url { font-size: 0.6rem; color: var(--accent3); letter-spacing: 0.04em; }
+
+  /* FEATURE BOX */
+  .feature-box {
+    background: var(--ink); color: var(--bg);
+    padding: 1.8rem; margin-bottom: 1.5rem;
+    border-radius: 3px; position: relative; overflow: hidden;
+  }
+  .feature-box::after {
+    content: '★'; position: absolute; right: -10px; bottom: -20px;
+    font-size: 7rem; opacity: 0.05; font-family: 'Fraunces', serif;
+  }
+  .feature-label {
+    font-size: 0.57rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--yellow); margin-bottom: 0.7rem; display: block;
+  }
+  .feature-box h2 {
+    font-family: 'Fraunces', serif; font-size: 1.9rem; font-weight: 900;
+    line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 0.8rem;
+  }
+  .feature-box h2 em { font-style: italic; font-weight: 300; color: var(--yellow); }
+  .feature-box p { font-size: 0.74rem; line-height: 1.8; color: rgba(245,240,232,0.7); margin-bottom: 1rem; }
+  .feature-btn {
+    display: inline-block; background: var(--yellow); color: var(--ink);
+    padding: 0.55rem 1.4rem; font-family: 'Space Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px; font-weight: 700;
+    transition: opacity 0.2s;
+  }
+  .feature-btn:hover { opacity: 0.82; }
+
+  /* STEP LIST */
+  .step-item {
+    display: grid; grid-template-columns: 26px 1fr; gap: 0.7rem;
+    padding: 0.85rem 0; border-bottom: 1px dashed var(--border); align-items: start;
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-num { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 900; color: var(--accent); line-height: 1; }
+  .step-content strong { display: block; font-size: 0.7rem; margin-bottom: 0.18rem; }
+  .step-content span { font-size: 0.67rem; color: var(--muted); line-height: 1.6; }
+
+  /* ARCH DIAGRAM */
+  .arch-diagram {
+    background: var(--paper); border: 1px solid var(--border);
+    border-radius: 3px; padding: 1.4rem; text-align: center; margin: 1.2rem 0;
+  }
+  .arch-main {
+    display: inline-block; background: var(--accent); color: white;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 0.82rem;
+    padding: 0.55rem 1.4rem; border-radius: 3px; margin-bottom: 0.9rem;
+  }
+  .arch-lines { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
+  .arch-node {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 0.4rem 0.65rem; border-radius: 3px; font-size: 0.58rem; text-align: center;
+  }
+  .arch-node strong { display: block; font-family: 'Fraunces', serif; font-size: 0.65rem; margin-bottom: 1px; }
+  .arch-node span { color: var(--muted); }
+
+  /* QUICK LISTS */
+  .info-list { list-style: none; }
+  .info-list li {
+    font-size: 0.69rem; line-height: 2; color: #3d3020;
+    padding-left: 0.8rem; position: relative;
+  }
+  .info-list li::before { content: '—'; position: absolute; left: 0; color: var(--muted); }
+
+  .cost-badge {
+    background: var(--accent2); color: white;
+    font-family: 'Fraunces', serif; font-weight: 900; font-size: 2rem;
+    padding: 0.5rem 1rem; border-radius: 3px;
+    transform: rotate(-1.5deg); display: block;
+    text-align: center; margin-bottom: 0.8rem; letter-spacing: -0.03em;
+  }
+
+  /* BOTTOM ROW */
+  .bottom-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid var(--ink); max-width: 1200px; margin: 0 auto;
+  }
+  .bottom-col {
+    padding: 1.4rem 2rem; border-right: 1px solid var(--border);
+  }
+  .bottom-col:last-child { border-right: none; }
+  .bottom-col-label {
+    font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.7rem;
+    padding-bottom: 0.4rem; border-bottom: 1px solid var(--border);
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 2px solid var(--ink);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 3rem; font-size: 0.6rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .newspaper-grid { grid-template-columns: 1fr; }
+    .col { border-right: none; border-bottom: 1px solid var(--border); }
+    .bottom-row { grid-template-columns: 1fr 1fr; }
+    .header-top, .masthead { padding: 1.2rem 1.5rem; }
+    footer { flex-direction: column; gap: 0.4rem; text-align: center; padding: 1.2rem; }
+  }
+  @media (max-width: 500px) {
+    .bottom-row { grid-template-columns: 1fr; }
+    .nav-bar { display: none; }
+  }
+
+  .newspaper-grid { animation: fadeIn 0.7s 0.1s ease both; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header-top">
+  <div class="issue-info">Vol. I · Issue 001 · Free Forever · Public</div>
+  <div class="header-stamp">✦ Zero Cost ✦</div>
+  <div class="issue-info">GitHub · Netlify · Vercel · Notion · Google Sites</div>
+</div>
+
+<div class="masthead">
+  <div class="masthead-eyebrow">est. today &nbsp;·&nbsp; community info hub &nbsp;·&nbsp; free &amp; open</div>
+  <h1>Horizon 2026<br><em>New Humankind</em></h1>
+  <div class="masthead-sub">All public · All free · All connected</div>
+</div>
+
+<nav class="nav-bar">
+  <a href="#platforms">Platforms</a>
+  <a href="#plan">The Plan</a>
+  <a href="#deploy">Deploy Guide</a>
+  <a href="https://pages.github.com" target="_blank">GitHub Pages →</a>
+  <a href="https://netlify.com" target="_blank">Netlify →</a>
+  <a href="https://vercel.com" target="_blank">Vercel →</a>
+  <a href="https://notion.so" target="_blank">Notion →</a>
+  <a href="https://sites.google.com" target="_blank">Google Sites →</a>
+</nav>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    ✦ COMMUNITY INFO HUB &nbsp;·&nbsp; FREE HOSTING ON GITHUB PAGES &nbsp;·&nbsp; CONNECT WITH NETLIFY &amp; VERCEL &nbsp;·&nbsp; WIKI ON NOTION &amp; GOOGLE SITES &nbsp;·&nbsp; ZERO COST · ZERO ADS · FULLY PUBLIC &nbsp;·&nbsp; OPEN INFORMATION FOR EVERYONE &nbsp;·&nbsp; ✦ COMMUNITY INFO HUB &nbsp;·&nbsp; FREE HOSTING ON GITHUB PAGES &nbsp;·&nbsp; CONNECT WITH NETLIFY &amp; VERCEL &nbsp;·&nbsp; WIKI ON NOTION &amp; GOOGLE SITES &nbsp;·&nbsp; ZERO COST · ZERO ADS · FULLY PUBLIC &nbsp;·&nbsp; OPEN INFORMATION FOR EVERYONE &nbsp;·&nbsp;
+  </span>
+</div>
+
+<!-- MAIN 3-COL GRID -->
+<div class="newspaper-grid" id="platforms">
+
+  <!-- LEFT: Platform cards -->
+  <div class="col">
+    <div class="col-label">Free Platforms</div>
+
+    <a href="https://pages.github.com" target="_blank" class="platform-card card-gh">
+      <div class="platform-header">
+        <div class="platform-name">🐙 GitHub Pages</div>
+        <div class="platform-tag">Main Hub</div>
+      </div>
+      <div class="platform-desc">Host this very page. Your main website lives at yourusername.github.io — pure HTML, no server, no cost.</div>
+      <div class="platform-url">pages.github.com →</div>
+    </a>
+
+    <a href="https://netlify.com" target="_blank" class="platform-card card-netlify">
+      <div class="platform-header">
+        <div class="platform-name">⚡ Netlify</div>
+        <div class="platform-tag">Sub-pages</div>
+      </div>
+      <div class="platform-desc">Drag &amp; drop any folder and it goes live. Great for community event pages, newsletters, or extra sections.</div>
+      <div class="platform-url">netlify.com →</div>
+    </a>
+
+    <a href="https://vercel.com" target="_blank" class="platform-card card-vercel">
+      <div class="platform-header">
+        <div class="platform-name">▲ Vercel</div>
+        <div class="platform-tag">Apps / Tools</div>
+      </div>
+      <div class="platform-desc">Best for interactive community tools and React apps. Free tier with global CDN and GitHub auto-deploy.</div>
+      <div class="platform-url">vercel.com →</div>
+    </a>
+
+    <a href="https://notion.so" target="_blank" class="platform-card card-notion">
+      <div class="platform-header">
+        <div class="platform-name">📓 Notion</div>
+        <div class="platform-tag">Wiki / Docs</div>
+      </div>
+      <div class="platform-desc">One click to make any page public. Perfect for community wikis, guides, FAQs, and shared knowledge bases.</div>
+      <div class="platform-url">notion.so →</div>
+    </a>
+
+    <a href="https://sites.google.com" target="_blank" class="platform-card card-gsites">
+      <div class="platform-header">
+        <div class="platform-name">🔷 Google Sites</div>
+        <div class="platform-tag">No-Code</div>
+      </div>
+      <div class="platform-desc">Build info pages visually in your browser. No coding needed. Great for calendars and resource listings.</div>
+      <div class="platform-url">sites.google.com →</div>
+    </a>
+  </div>
+
+  <!-- CENTER: Feature + steps -->
+  <div class="col" id="plan">
+    <div class="col-label">Feature Story</div>
+
+    <div class="feature-box">
+      <span class="feature-label">★ The Big Idea</span>
+      <h2>One Hub,<br><em>Many Voices</em></h2>
+      <p>Your community deserves a home on the internet — not locked behind paywalls, not cluttered with ads. One central free website that links everything together, public by design.</p>
+      <a href="https://pages.github.com" target="_blank" class="feature-btn">Deploy Now — Free →</a>
+    </div>
+
+    <div class="col-label" style="margin-top:1.5rem" id="deploy">Step-by-Step</div>
+    <h2 class="col-headline">Go live in<br>one afternoon</h2>
+    <p class="body-text">No technical experience needed. No credit card. No contracts. Follow these steps and your community hub will be live today.</p>
+
+    <div>
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Create a free GitHub account</strong>
+          <span>Go to github.com and sign up. Create a repository named yourusername.github.io — this becomes your main free URL automatically.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Save &amp; upload this HTML file</strong>
+          <span>Save this page as index.html, upload it to your GitHub repo. It goes live in under 2 minutes at yourusername.github.io.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Build your community wiki on Notion</strong>
+          <span>Create pages in Notion for guides, FAQs, announcements. Set each page to "Share to web" — instantly public, no cost.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Set up info pages on Google Sites</strong>
+          <span>Use Google Sites for event calendars, resource directories, or contact forms. Zero coding required.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>Deploy extras on Netlify or Vercel</strong>
+          <span>Any extra pages go on Netlify (drag &amp; drop). Any interactive tools or apps go on Vercel (connect to GitHub).</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <strong>Update all links on this main page</strong>
+          <span>Replace the placeholder links on this page with your real URLs. Everything now connects from one hub.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-head">Architecture at a glance</h3>
+    <div class="arch-diagram">
+      <div class="arch-main">🌐 yourusername.github.io (Main Hub)</div>
+      <div style="color:var(--muted);font-size:0.65rem;margin-bottom:0.7rem">links out to →</div>
+      <div class="arch-lines">
+        <div class="arch-node"><strong>Notion</strong><span>Wiki &amp; Docs</span></div>
+        <div class="arch-node"><strong>Google Sites</strong><span>Info Pages</span></div>
+        <div class="arch-node"><strong>Netlify</strong><span>Extra Pages</span></div>
+        <div class="arch-node"><strong>Vercel</strong><span>Apps &amp; Tools</span></div>
+      </div>
+    </div>
+    <p class="body-text" style="font-size:0.68rem;color:var(--muted)">All platforms free. All content public. Everything connects from one GitHub Pages URL.</p>
+  </div>
+
+  <!-- RIGHT: Reference -->
+  <div class="col">
+    <div class="col-label">Quick Reference</div>
+
+    <h3 class="section-head" style="border-top:none;margin-top:0;padding-top:0">What goes where</h3>
+    <ul class="info-list">
+      <li>Main landing page → GitHub Pages</li>
+      <li>Community wiki → Notion</li>
+      <li>Event calendar → Google Sites</li>
+      <li>Resource directory → Google Sites</li>
+      <li>Community blog → Hashnode (free)</li>
+      <li>Interactive tools → Vercel</li>
+      <li>Extra static pages → Netlify</li>
+      <li>Community chat → Discord (free)</li>
+    </ul>
+
+    <h3 class="section-head">Total cost</h3>
+    <div class="cost-badge">$0.00</div>
+    <p class="body-text" style="font-size:0.68rem;text-align:center;color:var(--muted)">Every platform is free tier. No hidden fees.</p>
+
+    <h3 class="section-head">Custom domain (optional)</h3>
+    <p class="body-text">Your free github.io URL works perfectly and is shareable immediately. If you want a custom domain later, Porkbun or Namecheap offer them for ~$10/year.</p>
+
+    <h3 class="section-head">What you need</h3>
+    <ul class="info-list">
+      <li>A GitHub account (free)</li>
+      <li>A browser (you have this)</li>
+      <li>This HTML file (you have this)</li>
+      <li>About 20 minutes</li>
+    </ul>
+
+    <h3 class="section-head">Success tips</h3>
+    <ul class="info-list">
+      <li>Keep main page simple and fast</li>
+      <li>Make all Notion pages "Share to web"</li>
+      <li>Use Google Sites for forms &amp; calendars</li>
+      <li>Link back to hub from every sub-site</li>
+      <li>Update content regularly</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- BOTTOM ROW -->
+<div class="bottom-row">
+  <div class="bottom-col">
+    <div class="bottom-col-label">Community content ideas</div>
+    <ul class="info-list">
+      <li>Announcements &amp; news</li>
+      <li>Meeting notes &amp; minutes</li>
+      <li>Member directory</li>
+      <li>Event listings</li>
+      <li>Resources &amp; guides</li>
+    </ul>
+  </div>
+  <div class="bottom-col">
+    <div class="bottom-col-label">Free platform limits</div>
+    <ul class="info-list">
+      <li>GitHub Pages: 1GB storage</li>
+      <li>Netlify: 100GB bandwidth/mo</li>
+      <li>Vercel: 100GB bandwidth/mo</li>
+      <li>Notion: unlimited public pages</li>
+      <li>Google Sites: unlimited</li>
+    </ul>
+  </div>
+  <div class="bottom-col">
+    <div class="bottom-col-label">Accessibility</div>
+    <ul class="info-list">
+      <li>Works on all devices</li>
+      <li>No login to read</li>
+      <li>Fast on slow connections</li>
+      <li>Screen reader friendly</li>
+      <li>Printable layout</li>
+    </ul>
+  </div>
+  <div class="bottom-col">
+    <div class="bottom-col-label">Next steps</div>
+    <ul class="info-list">
+      <li>Add your community name</li>
+      <li>Replace placeholder links</li>
+      <li>Customize the colors</li>
+      <li>Tell your community</li>
+      <li>Share the URL everywhere</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>The Community Hub · Free Forever · Public Domain</span>
+  <span>Built with HTML · Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></span>
+  <span>Zero cost · Zero ads · Open to all</span>
+</footer>
+
+</body>
+</html>
