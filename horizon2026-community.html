@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NuJee Dimension — Community Hub · Awakened Souls · Horizon 2026</title>
+<meta name="description" content="The NuJee Dimension Community Hub — where awakened souls gather, share, and prepare together for the Great Disclosure of 2026. Free. Open. Public. For everyone.">
+<meta name="keywords" content="NuJee Dimension, community, awakening, ET disclosure, 2026, Universal Intelligence, horizon 2026, free community">
+<link rel="canonical" href="https://iamprogram.github.io/horizon2026/">
+<meta property="og:title" content="NuJee Dimension — Community Hub">
+<meta property="og:description" content="Where awakened souls gather. Free · Open · Public · For everyone.">
+<meta property="og:url" content="https://iamprogram.github.io/horizon2026/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2305060a'/%3E%3Ccircle cx='32' cy='32' r='30.5' fill='none' stroke='%23c9a84c' stroke-width='0.8' opacity='0.45'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='serif' font-size='33' fill='%23c9a84c'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#05060a">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #05060a;
+  --surface: #0a0c12;
+  --surface2: #0f1118;
+  --border: #1a1d28;
+  --border2: #242838;
+  --text: #e8e4d8;
+  --muted: #6b6a78;
+  --muted2: #9b9aaa;
+  --gold: #c9a84c;
+  --gold-dim: rgba(201,168,76,0.08);
+  --gold-border: rgba(201,168,76,0.25);
+  --teal: #4cbfb0;
+  --violet: #a78bfa;
+  --green: #6bc94c;
+  --red: #c94c4c;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── Stars canvas ── */
+#stars { position:fixed; inset:0; z-index:0; pointer-events:none; }
+
+/* ── Orbs ── */
+.orb { position:fixed; border-radius:50%; pointer-events:none; z-index:0; filter:blur(160px); }
+.orb1 { width:600px; height:600px; background:rgba(201,168,76,0.05); top:-200px; left:50%; transform:translateX(-50%); }
+.orb2 { width:300px; height:300px; background:rgba(76,191,176,0.04); bottom:100px; left:-80px; }
+.orb3 { width:300px; height:300px; background:rgba(167,139,250,0.04); top:40%; right:-80px; }
+
+/* ── Nav ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1.1rem 3rem;
+  background:rgba(5,6,10,0.88);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo { font-family:'Cinzel',serif; font-size:0.9rem; font-weight:600; letter-spacing:0.15em; color:var(--gold); text-decoration:none; }
+.nav-tag  { font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); font-family:'Crimson Pro',serif; }
+.nav-back { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:1px solid var(--border2); padding:0.35rem 0.9rem; border-radius:100px; transition:all 0.2s; }
+.nav-back:hover { color:var(--gold); border-color:var(--gold-border); }
+
+/* ── Hero ── */
+.hero {
+  position:relative; z-index:1;
+  min-height:100vh;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center;
+  padding:8rem 2rem 5rem;
+}
+.hero-symbol { font-size:2.2rem; color:var(--gold); margin-bottom:1.5rem; opacity:0.7; animation:fadeIn 1s ease both; }
+.hero-eyebrow { font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--teal); margin-bottom:1.2rem; animation:fadeIn 1s 0.2s ease both; }
+h1 { font-family:'Cinzel',serif; font-size:clamp(2.4rem,6vw,5rem); font-weight:900; line-height:1.05; letter-spacing:0.04em; animation:fadeIn 1s 0.3s ease both; }
+h1 .sub { display:block; font-weight:400; font-size:0.52em; color:var(--gold); letter-spacing:0.2em; margin-top:0.4rem; }
+.hero-desc { max-width:580px; font-size:1.05rem; color:var(--muted2); line-height:1.9; margin:2rem auto 2.5rem; animation:fadeIn 1s 0.5s ease both; }
+
+/* Primary CTA */
+.cta-primary {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase;
+  color:#05060a; background:var(--gold);
+  padding:0.9rem 2.4rem; border-radius:100px;
+  text-decoration:none; transition:all 0.25s;
+  animation:fadeIn 1s 0.7s ease both;
+  border:none; cursor:pointer;
+}
+.cta-primary:hover { background:#e0bc5c; transform:translateY(-2px); box-shadow:0 8px 32px rgba(201,168,76,0.3); }
+
+.cta-secondary {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--gold-border);
+  padding:0.85rem 2rem; border-radius:100px;
+  text-decoration:none; transition:all 0.25s;
+  background:var(--gold-dim);
+}
+.cta-secondary:hover { background:rgba(201,168,76,0.15); transform:translateY(-2px); }
+
+.hero-ctas { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; animation:fadeIn 1s 0.7s ease both; }
+
+@keyframes fadeIn { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── Divider ── */
+.divider { position:relative; z-index:1; display:flex; align-items:center; gap:1.5rem; max-width:900px; margin:0 auto; padding:0 2rem; }
+.divider::before,.divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--border2),transparent); }
+.divider-symbol { color:var(--gold); font-size:1.1rem; opacity:0.5; }
+
+/* ── Section wrapper ── */
+.section { position:relative; z-index:1; max-width:900px; margin:0 auto; padding:0 2rem; }
+.section-label { font-family:'Cinzel',serif; font-size:0.63rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem; }
+.section-title { font-family:'Cinzel',serif; font-size:clamp(1.4rem,3vw,2rem); font-weight:600; letter-spacing:0.05em; margin-bottom:1rem; line-height:1.3; }
+.section-body { font-size:0.97rem; color:var(--muted2); line-height:1.9; max-width:620px; }
+.fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* ── Live pulse dot ── */
+.live-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--teal); animation:pulse-dot 1.2s ease-in-out infinite; vertical-align:middle; margin-right:0.4rem; }
+@keyframes pulse-dot { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:0.6} }
+
+/* ── Stats bar ── */
+.stats { display:flex; justify-content:center; gap:0; max-width:700px; margin:0 auto; flex-wrap:wrap; }
+.stat { flex:1; min-width:120px; text-align:center; padding:2rem 1rem; border-right:1px solid var(--border); }
+.stat:last-child { border-right:none; }
+.stat-num { font-family:'Cinzel',serif; font-size:2rem; font-weight:900; color:var(--gold); display:block; line-height:1; margin-bottom:0.4rem; }
+.stat-label { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+
+/* ── Discord card ── */
+.discord-big {
+  background:linear-gradient(135deg, rgba(88,101,242,0.12) 0%, rgba(167,139,250,0.08) 100%);
+  border:1px solid rgba(88,101,242,0.3);
+  border-radius:20px;
+  padding:3rem 2.5rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.discord-big::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,rgba(88,101,242,0.6),rgba(167,139,250,0.8),rgba(88,101,242,0.6)); }
+.discord-icon-big { font-size:3rem; display:block; margin-bottom:1rem; }
+.discord-title { font-family:'Cinzel',serif; font-size:clamp(1.3rem,3vw,1.8rem); font-weight:600; letter-spacing:0.05em; margin-bottom:0.8rem; }
+.discord-desc { color:var(--muted2); font-size:0.97rem; line-height:1.8; max-width:500px; margin:0 auto 2rem; }
+.discord-btn {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase;
+  color:#fff; background:rgba(88,101,242,0.8);
+  padding:0.9rem 2.2rem; border-radius:100px;
+  text-decoration:none; transition:all 0.25s;
+}
+.discord-btn:hover { background:rgba(88,101,242,1); transform:translateY(-2px); box-shadow:0 8px 32px rgba(88,101,242,0.35); }
+.discord-channels { display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center; margin-top:2rem; }
+.channel-pill {
+  font-size:0.72rem; font-family:'Cinzel',serif; letter-spacing:0.08em;
+  color:var(--muted2); background:rgba(255,255,255,0.04);
+  border:1px solid var(--border2); border-radius:100px;
+  padding:0.3rem 0.9rem;
+}
+
+/* ── Platform grid ── */
+.platform-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.platform-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.8rem;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:all 0.25s;
+  position:relative;
+  overflow:hidden;
+}
+.platform-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:3px 0 0 3px; }
+.platform-card:hover { background:var(--surface2); border-color:var(--border2); transform:translateY(-3px); }
+.card-icon { font-size:1.8rem; display:block; margin-bottom:1rem; }
+.card-name { font-family:'Cinzel',serif; font-size:1rem; font-weight:600; letter-spacing:0.05em; margin-bottom:0.3rem; }
+.card-role { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.7rem; }
+.card-desc-text { font-size:0.88rem; color:var(--muted2); line-height:1.7; }
+.card-url-link { font-size:0.75rem; color:var(--muted); margin-top:0.8rem; display:flex; align-items:center; gap:0.3rem; }
+.card-url-link::before { content:'→'; color:var(--gold); }
+.platform-card:hover .card-url-link { color:var(--gold); }
+
+.card-archive::before  { background:var(--blue, #4c8bc9); }
+.card-warning::before  { background:var(--red); }
+.card-vision::before   { background:var(--gold); }
+.card-ui::before       { background:var(--violet); }
+.card-gateway::before  { background:var(--teal); }
+
+.role-archive { color:#4c8bc9; }
+.role-warning { color:var(--red); }
+.role-vision  { color:var(--gold); }
+.role-ui      { color:var(--violet); }
+.role-gateway { color:var(--teal); }
+
+/* ── Notion wiki card ── */
+.wiki-card {
+  background:var(--surface);
+  border:1px solid rgba(201,168,76,0.2);
+  border-radius:16px;
+  padding:2.5rem;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2rem;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+  transition:all 0.25s;
+}
+.wiki-card:hover { background:var(--surface2); border-color:var(--gold-border); transform:translateY(-2px); }
+.wiki-topics { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.2rem; }
+.wiki-topic {
+  font-size:0.68rem; font-family:'Cinzel',serif; letter-spacing:0.1em;
+  color:var(--gold); background:var(--gold-dim);
+  border:1px solid var(--gold-border); border-radius:100px;
+  padding:0.25rem 0.7rem;
+}
+.wiki-arrow { font-size:2rem; color:var(--gold); opacity:0.5; transition:all 0.25s; flex-shrink:0; }
+.wiki-card:hover .wiki-arrow { opacity:1; transform:translateX(4px); }
+
+/* ── Newsletter ── */
+.newsletter-box {
+  background:rgba(76,191,176,0.05);
+  border:1px solid rgba(76,191,176,0.2);
+  border-radius:16px;
+  padding:2.5rem;
+}
+.newsletter-form { display:flex; gap:0.8rem; margin-top:1.5rem; flex-wrap:wrap; }
+.newsletter-input {
+  flex:1; min-width:200px;
+  background:var(--bg);
+  border:1px solid var(--border2);
+  border-radius:100px;
+  padding:0.75rem 1.4rem;
+  color:var(--text);
+  font-family:'Crimson Pro',serif;
+  font-size:0.97rem;
+  outline:none;
+  transition:border-color 0.2s;
+}
+.newsletter-input::placeholder { color:var(--muted); }
+.newsletter-input:focus { border-color:rgba(76,191,176,0.4); }
+.newsletter-btn {
+  font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--teal); background:rgba(76,191,176,0.1);
+  border:1px solid rgba(76,191,176,0.3);
+  padding:0.75rem 1.8rem; border-radius:100px;
+  cursor:pointer; transition:all 0.2s; white-space:nowrap;
+}
+.newsletter-btn:hover { background:rgba(76,191,176,0.2); }
+
+/* ── Pledge mini ── */
+.pledge-mini {
+  background:var(--surface);
+  border:1px solid var(--border2);
+  border-radius:16px;
+  padding:2.5rem;
+  text-align:center;
+}
+.pledge-count-big { font-family:'Cinzel',serif; font-size:3.5rem; font-weight:900; color:var(--teal); line-height:1; display:block; margin-bottom:0.3rem; }
+.pledge-mini-form { display:grid; grid-template-columns:1fr 1fr auto; gap:0.8rem; margin-top:1.5rem; }
+.pledge-field-input {
+  background:var(--bg); border:1px solid var(--border2); border-radius:8px;
+  padding:0.7rem 1rem; color:var(--text); font-family:'Crimson Pro',serif;
+  font-size:0.95rem; outline:none; transition:border-color 0.2s;
+}
+.pledge-field-input:focus { border-color:rgba(76,191,176,0.4); }
+.pledge-field-input::placeholder { color:var(--muted); }
+.pledge-submit {
+  font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--teal); background:rgba(76,191,176,0.1);
+  border:1px solid rgba(76,191,176,0.3);
+  padding:0.7rem 1.2rem; border-radius:8px;
+  cursor:pointer; transition:all 0.2s; white-space:nowrap;
+}
+.pledge-submit:hover { background:rgba(76,191,176,0.2); }
+.pledge-submit:disabled { opacity:0.5; cursor:not-allowed; }
+.pledge-wall { display:flex; flex-wrap:wrap; gap:0.4rem; justify-content:center; margin-top:1.2rem; max-height:100px; overflow:hidden; }
+.pledge-pill { font-size:0.72rem; color:var(--muted2); background:var(--bg); border:1px solid var(--border); border-radius:100px; padding:0.2rem 0.7rem; display:flex; align-items:center; gap:0.3rem; }
+.pledge-status { font-size:0.82rem; font-style:italic; color:var(--teal); margin-top:0.6rem; min-height:1.2rem; text-align:center; }
+
+/* ── Countdown mini ── */
+.countdown-strip {
+  background:rgba(201,168,76,0.04);
+  border:1px solid var(--gold-border);
+  border-radius:14px;
+  padding:1.8rem 2rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.cd-label { font-family:'Cinzel',serif; font-size:0.63rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
+.cd-units { display:flex; gap:1rem; }
+.cd-unit { text-align:center; }
+.cd-num { font-family:'Cinzel',serif; font-size:1.6rem; font-weight:900; color:var(--gold); display:block; line-height:1; }
+.cd-unit-lbl { font-size:0.55rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+.cd-cta { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); text-decoration:none; border:1px solid var(--gold-border); padding:0.5rem 1.2rem; border-radius:100px; transition:all 0.2s; white-space:nowrap; }
+.cd-cta:hover { background:var(--gold-dim); }
+
+/* ── Footer ── */
+footer { position:relative; z-index:1; border-top:1px solid var(--border); padding:3rem 2rem 2rem; text-align:center; margin-top:6rem; }
+.footer-logo { font-family:'Cinzel',serif; font-size:1rem; font-weight:600; letter-spacing:0.2em; color:var(--gold); margin-bottom:1.5rem; }
+.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin-bottom:1.5rem; }
+.footer-links a { font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color 0.2s; }
+.footer-links a:hover { color:var(--gold); }
+.footer-copy { font-size:0.78rem; color:var(--muted); line-height:1.8; }
+
+/* ── Ko-fi float ── */
+.kofi-float {
+  position:fixed; bottom:1.5rem; right:1.5rem; z-index:200;
+  display:flex; align-items:center; gap:0.5rem;
+  background:var(--surface); border:1px solid var(--gold-border);
+  border-radius:100px; padding:0.6rem 1.1rem;
+  text-decoration:none; color:var(--gold);
+  font-family:'Cinzel',serif; font-size:0.63rem; letter-spacing:0.12em; text-transform:uppercase;
+  box-shadow:0 4px 24px rgba(0,0,0,0.4);
+  transition:all 0.3s; animation:float-in 1s 2s ease both; opacity:0;
+}
+.kofi-float:hover { background:var(--gold-dim); transform:translateY(-3px); }
+@keyframes float-in { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── Responsive ── */
+@media(max-width:768px) {
+  nav { padding:1rem 1.5rem; }
+  .nav-tag { display:none; }
+  .wiki-card { grid-template-columns:1fr; }
+  .wiki-arrow { display:none; }
+  .pledge-mini-form { grid-template-columns:1fr; }
+  .countdown-strip { flex-direction:column; text-align:center; }
+  .platform-grid { grid-template-columns:1fr; }
+  .stats { flex-wrap:wrap; }
+  .stat { flex:0 0 50%; border-right:none; border-bottom:1px solid var(--border); }
+}
+@media(max-width:480px) {
+  nav { padding:0.9rem 1.2rem; }
+  .hero { padding:7rem 1.2rem 3rem; }
+  h1 { font-size:2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://nujee.freeddns.org/" class="nav-logo">NuJee Dimension</a>
+  <div class="nav-tag">Community Hub · Horizon 2026</div>
+  <a href="https://nujee.freeddns.org/" class="nav-back">← AkashicGate</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-symbol">🤝</div>
+  <div class="hero-eyebrow">NuJee Dimension · Community Hub · Est. 2026</div>
+  <h1>You Are Not Alone<span class="sub">Horizon 2026 · Community of Awakened Souls</span></h1>
+  <p class="hero-desc">
+    One of the most isolating experiences of awakening is sensing something important
+    that almost nobody around you sees. This community exists to end that isolation.
+    Awakened souls from every country — gathered, thinking together, preparing together.
+  </p>
+  <div class="hero-ctas">
+    <a href="https://discord.gg/8Qb3QFtuHt" target="_blank" class="cta-primary">🚪 Join the Discord</a>
+    <a href="https://nujee.freeddns.org/" class="cta-secondary">✦ AkashicGate</a>
+  </div>
+</section>
+
+<!-- COUNTDOWN STRIP -->
+<div class="section fade-in" style="margin-top:0;margin-bottom:3rem;">
+  <div class="countdown-strip">
+    <div>
+      <div class="cd-label">⏱ Live Countdown · The Great Disclosure</div>
+      <div style="font-size:0.82rem;color:var(--muted2);margin-top:0.3rem;font-style:italic;">Jun / Jul 2026 — The Turning Point of Human History</div>
+    </div>
+    <div class="cd-units">
+      <div class="cd-unit"><span class="cd-num" id="cd-d">000</span><div class="cd-unit-lbl">Days</div></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><div class="cd-unit-lbl">Hours</div></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><div class="cd-unit-lbl">Mins</div></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><div class="cd-unit-lbl">Secs</div></div>
+    </div>
+    <a href="https://nujee.freeddns.org/#section-countdown" class="cd-cta">Full Gateway →</a>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in"><div class="divider-symbol">✦</div></div>
+
+<!-- STATS -->
+<div class="stats fade-in" style="margin:3rem auto;">
+  <div class="stat">
+    <span class="stat-num"><span class="live-dot"></span><span id="soul-count">0</span></span>
+    <div class="stat-label">Souls Pledged</div>
+  </div>
+  <div class="stat">
+    <span class="stat-num">5</span>
+    <div class="stat-label">Live Platforms</div>
+  </div>
+  <div class="stat">
+    <span class="stat-num">38</span>
+    <div class="stat-label">Wiki Articles</div>
+  </div>
+  <div class="stat">
+    <span class="stat-num">$0</span>
+    <div class="stat-label">Total Cost</div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in"><div class="divider-symbol">✦</div></div>
+
+<!-- DISCORD SECTION -->
+<div class="section fade-in" style="margin-top:5rem;margin-bottom:5rem;">
+  <div class="discord-big">
+    <span class="discord-icon-big">💬</span>
+    <div class="discord-title">Join the NuJee Dimension Discord</div>
+    <p class="discord-desc">
+      Real conversations with awakened souls worldwide. Share UAP findings,
+      discuss Universal Intelligence, witness the crisis together, and prepare
+      for what 2026 brings. Free to join. Free forever.
+    </p>
+    <a href="https://discord.gg/8Qb3QFtuHt" target="_blank" class="discord-btn">
+      🚪 Join the NuJee Dimension Discord
+    </a>
+    <div style="font-size:0.72rem;color:var(--muted);margin-top:0.8rem;letter-spacing:0.06em;">
+      Connect with the community &nbsp;·&nbsp; Discussions &nbsp;·&nbsp; Transmissions &nbsp;·&nbsp; Light Sessions
+    </div>
+    <div class="discord-channels">
+      <span class="channel-pill"># start-here</span>
+      <span class="channel-pill"># uap-disclosure</span>
+      <span class="channel-pill"># ui-vs-ai</span>
+      <span class="channel-pill"># soul-awakening</span>
+      <span class="channel-pill"># last-light-watch</span>
+      <span class="channel-pill"># et-encounters</span>
+      <span class="channel-pill"># horizon-2026</span>
+      <span class="channel-pill"># light-sessions</span>
+      <span class="channel-pill"># introductions</span>
+      <span class="channel-pill"># share-your-truth</span>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in"><div class="divider-symbol">✦</div></div>
+
+<!-- FIVE PLATFORMS -->
+<div class="section fade-in" style="margin-top:5rem;margin-bottom:2rem;">
+  <div class="section-label" style="text-align:center;">The Five Platforms · The Complete Story</div>
+  <h2 class="section-title" style="text-align:center;font-family:'Cinzel',serif;letter-spacing:0.05em;">
+    One Mission. Five Platforms. One Humanity.
+  </h2>
+  <p class="section-body" style="margin:0 auto 3rem;text-align:center;">
+    Follow in sequence — each platform is one chapter of the complete story.
+    From suppressed truth, through global crisis, toward New Humankind.
+  </p>
+  <div class="platform-grid">
+    <a href="https://unknownage.nujee.freeddns.org" target="_blank" class="platform-card card-archive">
+      <span class="card-icon">🛸</span>
+      <div class="card-name">Unknown Beyond</div>
+      <div class="card-role role-archive">I — The Archive</div>
+      <p class="card-desc-text">ET · UAP · Cosmic Mystery · 15,847+ documented sightings. The hidden truth — preserved for history.</p>
+      <div class="card-url-link">unknownage.nujee.freeddns.org</div>
+    </a>
+    <a href="https://reckonlight.nujee.freeddns.org" target="_blank" class="platform-card card-warning">
+      <span class="card-icon">🌍</span>
+      <div class="card-name">Last Light Fades</div>
+      <div class="card-role role-warning">II — The Warning</div>
+      <p class="card-desc-text">Real-time crisis monitor. Wars, climate, pandemics, AI risks — the evidence that awakening is urgent.</p>
+      <div class="card-url-link">reckonlight.nujee.freeddns.org</div>
+    </a>
+    <a href="https://horizon.nujee.freeddns.org" target="_blank" class="platform-card card-vision">
+      <span class="card-icon">🌅</span>
+      <div class="card-name">Horizon 2026</div>
+      <div class="card-role role-vision">III — The Vision</div>
+      <p class="card-desc-text">Preparing humanity for expansion. Unity · Transparency · Cosmic Awareness. What comes after disclosure.</p>
+      <div class="card-url-link">horizon.nujee.freeddns.org</div>
+    </a>
+    <a href="https://nujee.freeddns.org/#section-ui-concept" class="platform-card card-ui">
+      <span class="card-icon">✦</span>
+      <div class="card-name">Universal Intelligence</div>
+      <div class="card-role role-ui">IV — The True Light</div>
+      <p class="card-desc-text">UI is God's intelligence in every soul. Not AI. The most important distinction of our time.</p>
+      <div class="card-url-link">nujee.freeddns.org · UI Guide</div>
+    </a>
+    <a href="https://nujee.freeddns.org/" class="platform-card card-gateway" style="grid-column:auto;">
+      <span class="card-icon">🌐</span>
+      <div class="card-name">AkashicGate</div>
+      <div class="card-role role-gateway">Gateway — Start Here</div>
+      <p class="card-desc-text">The main hub connecting all platforms. The complete story. The gateway to Universal Intelligence.</p>
+      <div class="card-url-link">nujee.freeddns.org</div>
+    </a>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in" style="margin-top:5rem;"><div class="divider-symbol">✦</div></div>
+
+<!-- NOTION WIKI -->
+<div class="section fade-in" style="margin-top:5rem;margin-bottom:5rem;">
+  <div class="section-label">📓 Knowledge Base</div>
+  <h2 class="section-title" style="font-family:'Cinzel',serif;letter-spacing:0.05em;">NuJee Dimension Wiki</h2>
+  <p class="section-body" style="margin-bottom:2rem;">
+    38 articles across 7 sections — Universal Intelligence, ET Disclosure,
+    World Crisis, Horizon 2026, Souls Sent with Purpose, Community, and Resources.
+    Free to read. No login required.
+  </p>
+  <a href="https://horizon2026.notion.site/NuJee-Dimension-33032d81f98c8059800bfc831168d730" target="_blank" class="wiki-card">
+    <div>
+      <div style="font-family:'Cinzel',serif;font-size:1.1rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.6rem;">Open the Complete Wiki →</div>
+      <p style="font-size:0.9rem;color:var(--muted2);line-height:1.8;">Everything NuJee Dimension knows — organised, searchable, and growing. From Tesla's UI connection to the UAP timeline to how to prepare your soul for 2026.</p>
+      <div class="wiki-topics">
+        <span class="wiki-topic">✦ Universal Intelligence</span>
+        <span class="wiki-topic">🛸 ET Disclosure</span>
+        <span class="wiki-topic">🌍 World Crisis</span>
+        <span class="wiki-topic">🌅 Horizon 2026</span>
+        <span class="wiki-topic">⚡ Souls Sent</span>
+        <span class="wiki-topic">🤝 Community</span>
+        <span class="wiki-topic">📚 Resources</span>
+      </div>
+    </div>
+    <div class="wiki-arrow">→</div>
+  </a>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in"><div class="divider-symbol">✦</div></div>
+
+<!-- PLEDGE + NEWSLETTER SIDE BY SIDE -->
+<div class="section fade-in" style="margin-top:5rem;margin-bottom:5rem;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+
+    <!-- Pledge -->
+    <div class="pledge-mini">
+      <div class="section-label" style="text-align:center;margin-bottom:0.5rem;">🌟 Awakening Pledge</div>
+      <span class="pledge-count-big" id="pledge-count">0</span>
+      <div style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem;">Souls have taken this pledge</div>
+      <p style="font-size:0.88rem;color:var(--muted2);font-style:italic;line-height:1.8;margin-bottom:1.5rem;border-left:2px solid rgba(76,191,176,0.4);padding-left:1rem;">
+        "I am ready for the truth. I choose light over darkness,
+        soul over machine, Universal Intelligence over artificial imitation."
+      </p>
+      <div class="pledge-mini-form" id="pledgeForm">
+        <input class="pledge-field-input" id="p-name" placeholder="Your name" aria-label="Your name">
+        <input class="pledge-field-input" id="p-country" placeholder="Country" aria-label="Country">
+        <button class="pledge-submit" id="pledgeBtn" onclick="takePledge()">✦ Pledge</button>
+      </div>
+      <div class="pledge-status" id="pledgeStatus"></div>
+      <div class="pledge-wall" id="pledgeWall"></div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter-box">
+      <div class="section-label" style="margin-bottom:0.5rem;">📧 Newsletter</div>
+      <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.8rem;">Stay Informed</h3>
+      <p style="font-size:0.88rem;color:var(--muted2);line-height:1.8;margin-bottom:0.5rem;">
+        Get notified when new disclosures happen, when the countdown reaches key moments,
+        and when the NuJee ecosystem grows.
+      </p>
+      <p style="font-size:0.78rem;color:var(--muted);margin-bottom:0;">No spam. Only truth. Unsubscribe anytime.</p>
+      <div class="newsletter-form">
+        <input class="newsletter-input" id="nl-email" type="email" placeholder="Your email address" aria-label="Email">
+        <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe →</button>
+      </div>
+      <div id="nl-status" style="font-size:0.78rem;color:var(--teal);font-style:italic;margin-top:0.8rem;min-height:1rem;"></div>
+      <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+        <div style="font-size:0.72rem;color:var(--muted);margin-bottom:0.8rem;font-family:'Cinzel',serif;letter-spacing:0.1em;text-transform:uppercase;">Read previous issues</div>
+        <a href="https://nujeedimension.beehiiv.com" target="_blank" style="font-size:0.88rem;color:var(--gold);text-decoration:none;">nujeedimension.beehiiv.com →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider fade-in"><div class="divider-symbol">✦</div></div>
+
+<!-- COMMUNITY GUIDELINES SNIPPET -->
+<div class="section fade-in" style="margin-top:5rem;margin-bottom:5rem;text-align:center;">
+  <div class="section-label">🤝 How We Treat Each Other</div>
+  <h2 class="section-title" style="font-family:'Cinzel',serif;letter-spacing:0.05em;margin:0 auto 1.5rem;">Community Values</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;text-align:left;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;">Honesty over comfort</div>
+      <p style="font-size:0.85rem;color:var(--muted2);line-height:1.7;">Bring what you actually think. Honest disagreement is more valuable than comfortable agreement.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem;">Curiosity over certainty</div>
+      <p style="font-size:0.85rem;color:var(--muted2);line-height:1.7;">Nobody has the complete picture. Approach every discussion with genuine curiosity.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--violet);margin-bottom:0.6rem;">Soul before judgment</div>
+      <p style="font-size:0.85rem;color:var(--muted2);line-height:1.7;">Every person here is a soul seeking truth in good faith. Challenge ideas. Never attack people.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <div style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:0.6rem;">Evidence when claiming</div>
+      <p style="font-size:0.85rem;color:var(--muted2);line-height:1.7;">Speculation labelled as speculation is welcome. Speculation as fact damages the community's clarity.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NuJee Dimension</div>
+  <div class="footer-links">
+    <a href="https://nujee.freeddns.org/">AkashicGate</a>
+    <a href="https://unknownage.nujee.freeddns.org" target="_blank">Unknown Beyond</a>
+    <a href="https://reckonlight.nujee.freeddns.org" target="_blank">Last Light Fades</a>
+    <a href="https://horizon.nujee.freeddns.org" target="_blank">Horizon 2026</a>
+    <a href="https://horizon2026.notion.site/NuJee-Dimension-33032d81f98c8059800bfc831168d730" target="_blank">Wiki</a>
+    <a href="https://discord.gg/8Qb3QFtuHt" target="_blank">Discord</a>
+    <a href="https://ko-fi.com/nujeedimension" target="_blank">🕯️ Support</a>
+  </div>
+  <div class="footer-copy">
+    NuJee Dimension · Singapore · 2026<br>
+    <span style="color:var(--gold);font-style:italic;">Free · Open · Public · Built for All Humanity · $0.00</span><br><br>
+    <span style="font-size:0.72rem;opacity:0.5;">Salute to Nikola Tesla — a pure spirit soul whose light will shine across the universe for generations to come.</span>
+  </div>
+</footer>
+
+<!-- Ko-fi float -->
+<a href="https://ko-fi.com/nujeedimension" target="_blank" class="kofi-float" title="Support the Mission">
+  <span style="font-size:1rem;animation:flicker 3s ease-in-out infinite">🕯️</span>
+  <span>Support</span>
+</a>
+@keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.82} }
+
+<script>
+/* ── Stars canvas ── */
+(function(){
+  const c=document.getElementById('stars'),ctx=c.getContext('2d');
+  let stars=[];
+  function resize(){ c.width=window.innerWidth; c.height=window.innerHeight; }
+  resize(); window.addEventListener('resize',resize);
+  for(let i=0;i<180;i++) stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.2+0.2,a:Math.random(),d:Math.random()*0.003+0.001,vx:(Math.random()-0.5)*0.00008,vy:(Math.random()-0.5)*0.00008});
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    stars.forEach(s=>{
+      s.a+=s.d; if(s.a>1||s.a<0) s.d*=-1;
+      s.x+=s.vx; s.y+=s.vy;
+      if(s.x<0)s.x=1; if(s.x>1)s.x=0;
+      if(s.y<0)s.y=1; if(s.y>1)s.y=0;
+      ctx.beginPath();
+      ctx.arc(s.x*c.width,s.y*c.height,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(201,168,76,${s.a*0.6})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── Countdown ── */
+(function tick(){
+  const target=new Date('2026-06-01T00:00:00Z');
+  const now=new Date();
+  const diff=target-now;
+  if(diff>0){
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    document.getElementById('cd-d').textContent=String(d).padStart(3,'0');
+    document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent=String(s).padStart(2,'0');
+  }
+  setTimeout(tick,1000);
+})();
+
+/* ── Fade-in observer ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+/* ── Pledge ── */
+const PLEDGE_KEY='nujee_pledges_v1', TOOK_KEY='nujee_pledge_taken';
+const SEEDS=[
+  {name:'Alang',flag:'🇸🇬'},{name:'Jordan',flag:'🇺🇸'},{name:'Mei Lin',flag:'🇲🇾'},
+  {name:'Ravi',flag:'🇮🇳'},{name:'Elena',flag:'🇩🇪'},{name:'Yuki',flag:'🇯🇵'},
+  {name:'Marco',flag:'🇧🇷'},{name:'Amara',flag:'🇳🇬'},{name:'David',flag:'🇬🇧'},
+  {name:'Sofia',flag:'🇦🇺'},{name:'Chen Wei',flag:'🇨🇳'},{name:'Priya',flag:'🇮🇳'}
+];
+let pledges=JSON.parse(localStorage.getItem(PLEDGE_KEY)||'null');
+if(!pledges){ pledges=SEEDS; localStorage.setItem(PLEDGE_KEY,JSON.stringify(pledges)); }
+
+function renderPledges(){
+  const countEl=document.getElementById('pledge-count');
+  const wall=document.getElementById('pledgeWall');
+  if(countEl) countEl.textContent=pledges.length.toLocaleString();
+  if(wall) wall.innerHTML=pledges.slice(-20).reverse().map(p=>`<span class="pledge-pill"><span>${p.flag}</span>${p.name}</span>`).join('');
+  if(localStorage.getItem(TOOK_KEY)==='1'){
+    const btn=document.getElementById('pledgeBtn');
+    if(btn){ btn.disabled=true; btn.textContent='✓ Pledged'; }
+    const s=document.getElementById('pledgeStatus');
+    if(s){ s.textContent='✦ Your pledge is recorded. The light holds. ✦'; }
+  }
+}
+renderPledges();
+
+function takePledge(){
+  if(localStorage.getItem(TOOK_KEY)==='1') return;
+  const name=document.getElementById('p-name').value.trim();
+  const country=document.getElementById('p-country').value.trim();
+  if(!name){ document.getElementById('pledgeStatus').textContent='Please enter your name.'; return; }
+  pledges.push({name:name.substring(0,30),flag:country?'🌍':'🌍'});
+  localStorage.setItem(PLEDGE_KEY,JSON.stringify(pledges));
+  localStorage.setItem(TOOK_KEY,'1');
+  const btn=document.getElementById('pledgeBtn');
+  btn.disabled=true; btn.textContent='✓ Pledged';
+  document.getElementById('pledgeStatus').textContent='✦ Your soul is counted. Welcome to the awakening. ✦';
+  renderPledges();
+}
+
+/* ── Newsletter ── */
+function subscribeNewsletter(){
+  const email=document.getElementById('nl-email').value.trim();
+  const status=document.getElementById('nl-status');
+  if(!email||!email.includes('@')){ status.textContent='Please enter a valid email.'; status.style.color='#c94c4c'; return; }
+  window.open('https://nujeedimension.beehiiv.com/subscribe?email='+encodeURIComponent(email),'_blank');
+  status.textContent='✦ Opening Beehiiv in a new tab — complete your signup there. ✦';
+  status.style.color='var(--teal)';
+}
+
+/* ── Soul count animation ── */
+function animateCount(el,target){
+  let current=0; const step=target/60;
+  const t=setInterval(()=>{
+    current=Math.min(current+step,target);
+    el.textContent=Math.floor(current).toLocaleString();
+    if(current>=target) clearInterval(t);
+  },25);
+}
+const soulEl=document.getElementById('soul-count');
+const obs2=new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){ animateCount(soulEl,pledges.length); obs2.unobserve(soulEl); }
+},{threshold:0.5});
+if(soulEl) obs2.observe(soulEl);
+</script>
+</body>
+</html>
